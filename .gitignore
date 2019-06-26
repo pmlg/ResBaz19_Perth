@@ -1,0 +1,12 @@
+# os
+.ideas
+
+# virtualenv
+.venv
+venv/
+ENV/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+.xml
