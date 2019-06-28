@@ -1,15 +1,3 @@
-# ResBaz19_Perth
-Research Bazaar 2019 Perth (Intro to Machine Learning)
-
-### Setup
-To create a virtual environment for data visualisation.
-```
-$ conda env create -f environment.yml
-$ conda activate resbaz
-```
-
-
-
 # Machine Learning Stream Software Requirements
 
 ## Requirements
@@ -72,7 +60,7 @@ $ tar xvzf rossmann.tgz
 > Note: By creating the virtual environment via Anaconda distribution, you will be working on an isolated working copy of Python with specific versions of libraries or Python itself without affecting the base Anaconda or other projects.
 
 Make sure the conda will be the latest version (conda install will also do the update)
-```
+```bash
 $ conda install conda
 ```
 
@@ -81,20 +69,20 @@ Create a virtual environment from YAML file which you can download from here
 > Note: download YAML file and place to any directory (i.e. /Desktop). Browse to the folder that YAML file exists before running the following command.
 >
 
-```
+```bash
 $ conda env create -f resbazml_environment.yml
 ```
 
 Close your Anaconda Prompt terminal (or others) and relaunch it
 
 Activate the environment
-```
+```bash
 $ conda activate resbazml
 ```
 
 4. Check the fastai installation and Pytorch version
 
-```
+```bash
 $ python -m fastai.utils.show_install
 ```
 
@@ -118,13 +106,13 @@ or the Miniconda Python 3.x distribution:	https://docs.conda.io/en/latest/minico
 Load (or reload) the terminal. Make sure you have defined the PATH system variable and have conda activated by testing the command conda-env list:
 
 If you don’t get an output similar to the one above, adjust the following commands to reflect your installation path and either run them interactively or add them to your .bashrc:
-```
+```bash
 $ export PATH="$HOME/miniconda3/bin:$PATH"
 $ source $HOME/miniconda3/bin/activate
 ```
 
 Create and activate a virtual environment called resbazml
-```
+```bash
 $ conda create --name resbazml python=3.7 -c conda-forge -c fastai python=3.7 pytorch fastai jupyter nb_conda_kernels xgboost pandas-profiling seaborn plotly python-cufflinks
 $ conda activate resbazml
 ```
@@ -132,24 +120,24 @@ $ conda activate resbazml
 ## Optional Settings
 
 - Create a Jupyter Notebook Kernel for the Python Environment so you can switch to different kernel. Create the Jupyter kernel and install ipywidgets
-```
+```bash
 $ python -m ipykernel install --user --name resbazml --display-name "resbazml"
 ```
 
 - Sometimes there will be ‘autopep8’ error once you start Jupyter Notebook. So you can reinstall ‘autopep8’ package using conda
-```
+```bash
 $ conda install -c conda-forge autopep8
 ```
 
 - Some extensions would be helpful for using the notebook (i.e. code folding, collapsible heading, etc.) The original GitHub repository which contains a source code is here
 
 - Install Nbextensions using Conda
-```
+```bash
 $ conda install -c conda-forge jupyter_contrib_nbextensions
 ```
 
 - Install Nbextensions Configurator using Conda
-```
+```bash
 $ conda install -c conda-forge jupyter_nbextensions_configurator
 ```
 
