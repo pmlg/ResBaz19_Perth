@@ -34,9 +34,10 @@ Open Windows command prompt (Press <kbd>win</kbd> and type `cmd`)
 Type `where python` and `where conda`
 
 Example: Note! your path may differ from the instruction
-```
+```powershell
 C:\>where python
 C:\Users\ResBaz\AppData\Local\Continuum\anaconda3\python.exe
+
 C:\>where conda
 C:\Users\ResBaz\AppData\Local\Continuum\anaconda3\condabin\conda.bat
 C:\Users\ResBaz\AppData\Local\Continuum\anaconda3\Library\bin\conda.bat
@@ -57,7 +58,7 @@ Type `exit()` then Enter or <kbd>Ctrl</kbd> + <kbd>D</kbd> to exit.
 
  - Download a dataset from Kaggle competition to your working directory. You can download all of them here.
 
-```
+```bash
 # In terminal, create a directory called 'rossmann'
 $ mkdir rossmann
 # Change to 'rossmann' directory:
@@ -108,7 +109,6 @@ Type the command line as below for the verification
 To check if your CUDA is available or not
 
 
-
 If the result is True, your CUDA is available for use. Otherwise, it will be False.
 
 ## MacOS and Linux
@@ -130,29 +130,34 @@ $ conda activate resbazml
 ```
 
 ## Optional Settings
-* Create a Jupyter Notebook Kernel for the Python Environment so you can switch to different kernel.
 
-Create the Jupyter kernel and install ipywidgets
+- Create a Jupyter Notebook Kernel for the Python Environment so you can switch to different kernel. Create the Jupyter kernel and install ipywidgets
+```
 $ python -m ipykernel install --user --name resbazml --display-name "resbazml"
+```
 
-Sometimes there will be ‘autopep8’ error once you start Jupyter Notebook. So you can reinstall ‘autopep8’ package using conda
+- Sometimes there will be ‘autopep8’ error once you start Jupyter Notebook. So you can reinstall ‘autopep8’ package using conda
+```
 $ conda install -c conda-forge autopep8
+```
 
-(Optional) Some extensions would be helpful for using the notebook (i.e. code folding, collapsible heading, etc.) The original GitHub repository which contains a source code is here
+- Some extensions would be helpful for using the notebook (i.e. code folding, collapsible heading, etc.) The original GitHub repository which contains a source code is here
 
-Install Nbextensions using Conda
+- Install Nbextensions using Conda
+```
 $ conda install -c conda-forge jupyter_contrib_nbextensions
+```
 
-Install Nbextensions Configurator using Conda
+- Install Nbextensions Configurator using Conda
+```
 $ conda install -c conda-forge jupyter_nbextensions_configurator
+```
 
-(Optional) Nbextensions tab will also appear right next to Clusters tab
-
+- Nbextensions tab will also appear right next to Clusters tab
 Example of configuration
 
-
-(Optional) Increase cell width in a web browser
-This solution will not change your default settings. All you need to do is add this following code into any cell of your current notebook and run the cell.
-
+- Increase cell width in a web browser - this solution will not change your default settings. All you need to do is add this following code into any cell of your current notebook and run the cell.
+```python
 from IPython.core.display import display, HTML
 display(HTML("<style>.container { width:100% !important; }</style>"))
+```
