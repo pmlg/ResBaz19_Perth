@@ -40,7 +40,7 @@ C:\Users\ResBaz\AppData\Local\Continuum\anaconda3\Scripts\conda.exe
 
 In the System variables section, choose Path → select **Edit** → click **New**
 
-![System properties](/images/system_prop.png)
+![System properties](/images/system_prop.png | width=100)
 
 Add the path → press **OK**
 
@@ -113,10 +113,11 @@ To check if your CUDA is available or not
 If the result is True, your CUDA is available for use. Otherwise, it will be False.
 
 ## MacOS and Linux
-Install the Anaconda Python 3.x distribution (recommended if you’re new to conda): https://www.anaconda.com/distribution/
+- Install the Anaconda Python 3.x distribution (recommended if you’re new to conda): https://www.anaconda.com/distribution/
 or the Miniconda Python 3.x distribution:	https://docs.conda.io/en/latest/miniconda.html
+- Load (or reload) the terminal. Make sure you have defined the PATH system variable and have conda activated by testing the command `conda-env list`:
 
-Load (or reload) the terminal. Make sure you have defined the PATH system variable and have conda activated by testing the command conda-env list:
+![CUDA test](/images/linux_env.png)
 
 If you don’t get an output similar to the one above, adjust the following commands to reflect your installation path and either run them interactively or add them to your .bashrc:
 ```bash
@@ -124,11 +125,24 @@ $ export PATH="$HOME/miniconda3/bin:$PATH"
 $ source $HOME/miniconda3/bin/activate
 ```
 
-Create and activate a virtual environment called resbazml
+- Create a directory to download the dataset and course content into:
 ```bash
-$ conda create --name resbazml python=3.7 -c conda-forge -c fastai python=3.7 pytorch fastai jupyter nb_conda_kernels xgboost pandas-profiling seaborn plotly python-cufflinks
-$ conda activate resbazml
+$ mkdir resbazml
+$ cd resbazml
+$ mkdir rossmann
+$ cd rossmann
+$ wget http://files.fast.ai/part2/lesson14/rossmann.tgz
+$ tar xvzf rossmann.tgz
 ```
+
+- Create and activate a virtual environment called **resbazml**
+```bash
+$ conda create --name resbazml -c conda-forge -c fastai python=3.7 pytorch fastai jupyter nb_conda_kernels py-xgboost=0.90 pandas-profiling seaborn plotly python-cufflinks
+$ conda activate resbazml
+$ pip install isoweek
+```
+
+- Check the fastai and Pytorch installations using steps 4 and 5 in the Windows instructions.
 
 ## Optional Settings
 
