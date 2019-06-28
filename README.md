@@ -40,7 +40,7 @@ C:\Users\ResBaz\AppData\Local\Continuum\anaconda3\Scripts\conda.exe
 
 In the System variables section, choose Path → select **Edit** → click **New**
 
-![System properties](/images/system_prop.png | width=100)
+![System properties](/images/system_prop.png)
 
 Add the path → press **OK**
 
