@@ -10,3 +10,5 @@ ENV/
 .ipynb_checkpoints
 
 .xml
+
+~$*
